@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kushagra Karar</title>
+<meta name="description" content="Kushagra Karar — MS (Research) in CSE at IIT Delhi. LLM inference, constrained decoding, and LLMs for software engineering.">
+<!-- TODO: once live, set this to your real URL -->
+<link rel="canonical" href="https://krishkarar.github.io/">
+<style>
+  :root {
+    --bg: #fbfbf9;
+    --text: #1d1d1b;
+    --muted: #5f5f5a;
+    --rule: #e3e2dc;
+    --accent: #1f5fa8;
+    --tag-bg: #eef2f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141414;
+      --text: #e8e6e1;
+      --muted: #a09e97;
+      --rule: #2c2c2a;
+      --accent: #7fb0ec;
+      --tag-bg: #1e2733;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 20px 72px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  h2 {
+    font: 600 0.78rem/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted);
+    margin: 48px 0 16px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .sub { color: var(--muted); margin: 0 0 18px; }
+  .links { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 0.92rem; }
+  .links a { margin-right: 16px; white-space: nowrap; }
+  p { margin: 0 0 14px; }
+  .item { margin-bottom: 22px; }
+  .item .title { font-weight: 600; }
+  .item .meta { color: var(--muted); font-size: 0.95rem; }
+  .item ul { margin: 6px 0 0; padding-left: 20px; }
+  .item li { margin-bottom: 4px; }
+  .tag {
+    display: inline-block; font: 600 0.72rem/1.6 system-ui, sans-serif;
+    background: var(--tag-bg); color: var(--accent);
+    padding: 0 7px; border-radius: 4px; margin-right: 6px; vertical-align: 2px;
+  }
+  .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .when { color: var(--muted); font-size: 0.92rem; white-space: nowrap; }
+  footer { margin-top: 56px; color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Kushagra Karar</h1>
+    <p class="sub">MS (Research), Computer Science &amp; Engineering, IIT Delhi</p>
+    <div class="links">
+      <a href="mailto:krishkararajay@gmail.com">Email</a>
+      <a href="mailto:csy247554@iitd.ac.in">IIT Delhi Mail</a>
+      <a href="Kushagra_Research_CV.pdf">CV</a>
+      <a href="https://github.com/krishkarar">GitHub</a>
+      <a href="https://www.linkedin.com/in/kushagra-karar-78a644213/">LinkedIn</a>
+      <!-- Optional: <a href="https://scholar.google.com/citations?user=XXXX">Scholar</a> -->
+    </div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>I work on making LLM outputs correct by construction. My current research runs an SMT solver inside the decoding loop of vLLM, so that fields a vision-language model extracts from documents stay consistent with each other: checksums, date rules, totals. Before that, I co-authored <a href="https://doi.org/10.1145/3797118">Speculate</a> (ACM FSE 2026), which combines static analysis with LLMs to generate REST API specifications from source code.</p>
+    <p>I'm advised by Prof. Abhilash Jindal at IIT Delhi and have collaborated with Prof. Guowei Yang (University of Queensland). <strong>I'm looking for roles in LLM inference, applied AI engineering and research engineering.</strong></p>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="item">
+      <div class="title">Speculate: Generating REST API Specifications Using LLMs</div>
+      <div class="meta">Krishanu Singh, <strong>Kushagra Karar</strong>, Abhilash Jindal, Guowei Yang &middot; ACM FSE 2026</div>
+      <div class="links" style="margin-top:4px">
+        <a href="https://doi.org/10.1145/3797118">Paper</a>
+        <a href="https://homecse.iitd.ac.in/speculate-acm-fse/">Write-up</a>
+        <!-- <a href="CODE_LINK">Code</a> -->
+      </div>
+      <ul>
+        <li>Raised request/response constraint recall from ~10% to ~80% over the prior state-of-the-art static-analysis tool, on 19 real-world Python and Java repositories.</li>
+        <li>ACM Artifacts Available and Evaluated&ndash;Reusable badges.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Talks &amp; posters</h2>
+    <div class="item">
+      <div class="row">
+        <div><span class="title">Talk</span> &middot; Speculate, ACM FSE 2026, Montr&eacute;al &middot; <a href="talks/fse26/">Recording</a></div>
+        <div class="when">Jul 2026</div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="row">
+        <div><span class="title">Poster</span> &middot; Speculate, IIT Delhi Open House and Google Day @ IIT Delhi &middot; <a href="speculate-poster.pdf">PDF</a></div>
+        <div class="when">Oct 2026</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Current research</h2>
+    <div class="item">
+      <div class="row">
+        <div class="title">Solver-constrained decoding for document extraction</div>
+        <div class="when">2025 &ndash; present</div>
+      </div>
+      <div class="meta">vLLM &middot; xGrammar &middot; Z3 &middot; Qwen2.5-VL</div>
+      <ul>
+        <li>Enforces cross-field rules during beam search, not after it: GPU logits &rarr; grammar mask &rarr; solver filter.</li>
+        <li>Up to +16 F1 points over grammar-only decoding on passports, ID cards (MIDV-2020) and receipts (CORD).</li>
+        <li>33% faster end to end by overlapping CPU-side solving with GPU inference; 3&times; faster solver filtering with incremental solving.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="item">
+      <div class="title">SeatScore</div>
+      <div class="meta">PyTorch &middot; YOLOv11 &middot; transfer learning</div>
+      <p style="margin-top:6px">Fatigue detection from whole-face images: +45% over an eye-aspect-ratio baseline, with an explainable regression tree at 94% accuracy.  <a href="https://github.com/barthwalsaurabh0/seatscrore">Code</a></p>
+    </div>
+    <!-- Add new projects here, newest first. Copy the .item block above. -->
+  </section>
+
+  <section>
+    <h2>Writing</h2>
+    <div class="item">
+      <div class="row">
+        <a class="title" href="https://homecse.iitd.ac.in/speculate-acm-fse/">Speculate @ ACM FSE</a>
+        <div class="when">Aug 2026</div>
+      </div>
+      <div class="meta">IIT Delhi CSE research stories</div>
+    </div>
+    <!-- New posts go here, newest first. A post can be a plain HTML file in posts/, e.g. posts/smt-in-beam-search.html -->
+  </section>
+
+  <footer>Last updated October 2026</footer>
+</main>
+</body>
+</html>
