@@ -62,12 +62,24 @@
   .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .when { color: var(--muted); font-size: 0.92rem; white-space: nowrap; }
   footer { margin-top: 56px; color: var(--muted); font-size: 0.85rem; }
+    .intro { display: flex; align-items: center; gap: 28px; }
+  .intro-text { flex: 1; min-width: 0; }
+  .photo {
+    width: 140px; height: 140px; flex-shrink: 0;
+    border-radius: 50%; object-fit: cover;
+    border: 1px solid var(--rule);
+  }
+  @media (max-width: 560px) {
+    .intro { flex-direction: column-reverse; align-items: flex-start; gap: 20px; }
+    .photo { width: 112px; height: 112px; }
+  }
 </style>
 </head>
 <body>
 <main>
 
-  <header>
+  <header class="intro">
+    <div class="intro-text">
     <h1>Kushagra Karar</h1>
     <p class="sub">MS (Research), Computer Science &amp; Engineering, IIT Delhi</p>
     <div class="links">
@@ -78,12 +90,13 @@
       <a href="https://www.linkedin.com/in/kushagra-karar-78a644213/">LinkedIn</a>
       <!-- Optional: <a href="https://scholar.google.com/citations?user=XXXX">Scholar</a> -->
     </div>
+    <img class="photo" src="photo.jpg" alt="Kushagra Karar">
   </header>
 
   <section>
     <h2>About</h2>
     <p>I work on making LLM outputs correct by construction. My current research runs an SMT solver inside the decoding loop of vLLM, so that fields a vision-language model extracts from documents stay consistent with each other: checksums, date rules, totals. Before that, I co-authored <a href="https://doi.org/10.1145/3797118">Speculate</a> (ACM FSE 2026), which combines static analysis with LLMs to generate REST API specifications from source code.</p>
-    <p>I'm advised by Prof. Abhilash Jindal at IIT Delhi and have collaborated with Prof. Guowei Yang (University of Queensland). <strong>I'm looking for roles in LLM inference, applied AI engineering and research engineering.</strong></p>
+    <p>I'm advised by Prof. Abhilash Jindal at IIT Delhi and have collaborated with Prof. Guowei Yang (University of Queensland). Before IIT Delhi, I completed my B.Tech in Computer Science &amp; Engineering at IIIT Una (2020&ndash;2024). <strong>I'm looking for roles in LLM inference, applied AI engineering and research roles.</strong></p>
   </section>
 
   <section>
@@ -97,12 +110,31 @@
         <!-- <a href="CODE_LINK">Code</a> -->
       </div>
       <ul>
-        <li>Raised request/response constraint recall from ~10% to ~80% over the prior state-of-the-art static-analysis tool, on 19 real-world Python and Java repositories.</li>
+        <li> Speculate is a language and framework agnostic tool used for automatically generating REST API specifications from source code using LLMs.</li>
+        <li> Speculate raises precision and recall from over the prior state-of-the-art static-analysis tools, on 19 real-world Python and Java repositories.</li>
         <li>ACM Artifacts Available and Evaluated&ndash;Reusable badges.</li>
       </ul>
     </div>
   </section>
 
+
+  <section>
+    <h2>Current research</h2>
+    <div class="item">
+      <div class="row">
+        <div class="title">Cross-field semantic constraints via SMT solving in VLM beam search</div>
+        <div class="when">Dec 2025 &ndash; present</div>
+      </div>
+      <div class="meta">vLLM &middot; xGrammar &middot; Z3 &middot; Qwen2.5-VL</div>
+      <ul>
+        <li>Enforces cross-field rules during beam search, not after it: GPU logits &rarr; grammar mask &rarr; solver filter.</li>
+        <li>Up to +16 F1 points over grammar-only decoding on passports, ID cards (MIDV-2020) and receipts (CORD).</li>
+        <li>33% faster end to end by overlapping CPU-side solving with GPU inference; 3&times; faster solver filtering with incremental solving.</li>
+      </ul>
+    </div>
+  </section>
+
+  
   <section>
     <h2>Talks &amp; posters</h2>
     <div class="item">
@@ -116,22 +148,6 @@
         <div><span class="title">Poster</span> &middot; Speculate, IIT Delhi Open House and Google Day @ IIT Delhi &middot; <a href="speculate-poster.pdf">PDF</a></div>
         <div class="when">Oct 2026</div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Current research</h2>
-    <div class="item">
-      <div class="row">
-        <div class="title">Solver-constrained decoding for document extraction</div>
-        <div class="when">2025 &ndash; present</div>
-      </div>
-      <div class="meta">vLLM &middot; xGrammar &middot; Z3 &middot; Qwen2.5-VL</div>
-      <ul>
-        <li>Enforces cross-field rules during beam search, not after it: GPU logits &rarr; grammar mask &rarr; solver filter.</li>
-        <li>Up to +16 F1 points over grammar-only decoding on passports, ID cards (MIDV-2020) and receipts (CORD).</li>
-        <li>33% faster end to end by overlapping CPU-side solving with GPU inference; 3&times; faster solver filtering with incremental solving.</li>
-      </ul>
     </div>
   </section>
 
